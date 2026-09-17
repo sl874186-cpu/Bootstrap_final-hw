@@ -1,0 +1,102 @@
+//index:　fixed 的 客製我的毛孩圖
+.btn-fixed-img-hover{
+    display: none;
+}
+a:hover .btn-fixed-img-default{
+    display: none;
+}
+a:hover .btn-fixed-img-hover{
+    display: block;
+}
+
+//index: 白色按鈕hover後變黃色
+.btn-primary-hover{
+    &:hover{
+    background-color: $primary;
+    border: transparent !important;
+    }
+}
+
+//index: 黃色按鈕 hover後變出陰影
+.btn-shadow-hover{
+    &:hover{
+        box-shadow: 0px 2px 0 black;
+    }
+}
+
+//index: 作品區 動物圖片hover後designer介紹
+.hover-container{
+    .mask-overlay{
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+        opacity: 0; 
+        transition: opacity 0.3s ease-in-out;   
+        cursor: pointer;
+    }
+    &:hover{
+        .mask-overlay {
+            opacity: 1; 
+        }    
+    }   
+}
+
+//index: 領養區 動物漫畫圖片hover後變成真實圖片
+.card-img-wrapper{
+    position: relative;
+    overflow: hidden;
+    .card-img-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+}
+.card:hover .card-img-default{
+    opacity: 0;
+}
+.card:hover .card-img-hover{
+    opacity: 1;
+}
+
+.a-color{
+    color: black;
+    transition: color 0.1s ease;
+}
+.card:hover .a-color{
+    color: $primary;
+}
+
+//adoption: 分頁數字hover變色
+li:hover .a-color{
+    color: $primary;
+}
+li .active{
+    color: $primary;
+}
+
+//designer: 姓名區的hover效果
+.designer-name-default{
+    color: black;
+}
+.designer-name-hover{
+    display: none;
+}
+li:hover .designer-name-default{
+    display: none;
+}
+li:hover .designer-name-hover{
+    display: block;
+    color: $primary;
+}
+
+@media screen and (max-width: 992px){
+    
+    li:hover .designer-name-default{
+    display: block;
+    color: $primary;
+}
+    li:hover .designer-name-hover{
+    display: none;
+
+}
+}

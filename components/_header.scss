@@ -1,0 +1,28 @@
+.header-index{
+    height: 810px;
+    background-image: url(./images/home.png);
+    background-size: cover;
+    background-position: top center;
+}
+.bg-filter{
+    background-image: url(./images/lightpaperfibers.png);
+    background-size: cover;
+    background-position: center center;
+}
+.banner-service-img-sm{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .header-index{
+        background-image: url(./images/home_mobile.png);
+    }
+    .banner-service-img-lg{
+    display: none;
+   }
+   .banner-service-img-sm{
+    padding-top: 30px; 
+    height: 100%;
+    display: block;
+   }
+}
